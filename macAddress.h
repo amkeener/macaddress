@@ -18,11 +18,9 @@
 /**
  * struct macAddress - MAC Address structure
  *
- * This struct stores MAC addresses for the blacklist and whitelist as well as
- * MACs received from probe packets
+ * This struct stores MAC addresses 
  *
  * @myAddress: unsigned int array storing 48bit MAC
- * @count: number of times device listed on blacklist
  */ 
 
 class macAddress 
@@ -30,8 +28,6 @@ class macAddress
 public:
 
     u_int8_t mac_addr[6];
-    int count;
-    bool new_run;
 
 macAddress();
 macAddress(uint8_t mac_byte1,
@@ -63,7 +59,7 @@ private:
 
 macAddress::macAddress()
 {
-        mac_addr[0] = 0;
+    mac_addr[0] = 0;
 	mac_addr[1] = 0;
 	mac_addr[2] = 0;
 	mac_addr[3] = 0;
